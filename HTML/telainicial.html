@@ -4,59 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cantinho do Sabor</title>
+   
     <link rel="stylesheet" href="../CSS/telainicial.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2aKwFs6fG6gfW6WR1sBR01e72yXseF0eRCnB0FUIvHjINar2qB59+RJD7p4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
-<body>
 
-<header>
-  <!--Carrinho -->  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
-        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0"/>
-      </svg>
-     <!--Contato--> <i class="bi bi-chat-left-dots"></i>
+<header class="text-center py-3">
     <h1>Nome do Restaurante</h1>
     <h2>Sabor & Tradição</h2>
+    <div class="d-flex justify-content-center">
+        <!-- Carrinho -->
+        <i class="bi bi-cart-plus-fill me-3" style="font-size: 24px;"></i>
+        <!-- Contato -->
+        <i class="bi bi-chat-left-dots" style="font-size: 24px;"></i>
+    </div>
 </header>
+<body>
 
-<nav>
-    <a href="#inicio">Início</a>
-    <a href="#sobre">Sobre Nós</a>
-    <a href="#cardapio">Cardápio</a>
-    <a href="#reservas">Reservas</a>
-    <a href="#contato">Contato</a>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid justify-content-center">
+        <a class="nav-link" href="#inicio">Início</a>
+        <a class="nav-link" href="#sobre">Sobre Nós</a>
+        <a class="nav-link" href="#cardapio">Cardápio</a>
+        <a class="nav-link" href="#reservas">Reservas</a>
+        <a class="nav-link" href="#contato">Contato</a>
+    </div>
 </nav>
 
-<section class="highlight">
-    <h3>Destaque do Dia:</h3>
-    <img src="/Imagens/pratoDestaque.jpg" alt="Destaque" width="200" height="150">
-    <p>🍽️ <strong>Espaguete alla Carbonara</strong><br>
-       ✨ Espaguete al dente em um molho cremoso de ovos e queijo pecorino, com pedaços crocantes de pancetta. Um toque de pimenta-do-reino realça os sabores, trazendo o melhor da cozinha italiana em cada garfada..</p>
-</section>
 
-<section class="promo">
-    <h3>Promos da Semana:</h3>
-    <p>- 10% de desconto em pedidos para viagem!</p>
-    <p>- Happy Hour: Drinks pela metade do preço das 18h às 20h.</p>
-</section>
 
-<div class="social-links">
+<div class="social-links text-center mt-4">
     <h3>Siga-nos nas redes sociais:</h3>
     <p>
-        <a href="#">Instagram</a> |  
-        <a href="#">Facebook</a> | 
-        <a href="#">Twitter</a>
+        <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+        <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+        <a href="https://www.twitter.com" target="_blank">Twitter</a>
     </p>
 </div>
 
-<button onclick="location.href='reservas.html'">Reserve sua mesa agora!</button>
+<div class="text-center mt-4">
+    <button class="btn btn-primary" onclick="window.location.href='reservas.html'">Reserve sua mesa agora!</button>
+</div>
 
-<footer>
+<footer class="text-center mt-4 py-3">
     <p>Aguardamos sua visita!<br>
        Rua Exemplo, 123 - Cidade<br>
        Telefone: (xx) xxxx-xxxx</p>
 </footer>
+
 
 </body>
 </html>

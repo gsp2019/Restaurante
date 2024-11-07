@@ -47,27 +47,61 @@
             color: #c0392b;
         }
 
-        .highlight, .promo {
-            margin: 40px 10%;
-            padding: 20px;
-            border-radius: 8px;
-            color: #fff;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
+        /* Estilo geral do carrossel */
+.carousel {
+    max-width: 800px; /* Limita a largura máxima */
+    margin: 20px auto; /* Centraliza o carrossel */
+    border-radius: 15px; /* Bordas arredondadas */
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
 
-        .highlight {
-            background-color: #c0392b;
-        }
+/* Imagens do carrossel */
+.carousel-inner img {
+    width: 150%; /* Imagem ocupa toda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    transition: transform 0.5s ease; /* Transição para o zoom ao passar o mouse */
+}
 
-        .promo {
-            background-color: #e67e22;
-        }
+/* Zoom suave ao passar o mouse */
+.carousel-inner img:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente a imagem */
+}
 
-        .highlight h3, .promo h3 {
-            font-weight: 600;
-            font-size: 1.5em;
-            margin-top: 0;
-        }
+/* Estilo das legendas */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
+    color: #ffffff; /* Cor do texto */
+    padding: 10px 20px;
+    border-radius: 8px; /* Bordas arredondadas na legenda */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Sombra no texto */
+    bottom: 20px; /* Posiciona a legenda mais próxima do fundo */
+}
+
+/* Estilo dos botões de navegação */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000000; /* Fundo preto */
+    border-radius: 50%; /* Forma circular */
+    padding: 10px; /* Tamanho maior para facilitar o clique */
+    opacity: 0.8; /* Transparência */
+}
+
+/* Efeito hover para os botões de navegação */
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #ffffff; /* Altera para branco ao passar o mouse */
+    opacity: 1; /* Remova a transparência no hover */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel-caption {
+        font-size: 14px; /* Texto menor em telas menores */
+        padding: 5px 10px;
+    }
+}
+
 
         footer {
             background-color: #8b0000;
