@@ -47,52 +47,25 @@
             color: #c0392b;
         }
 
-        /* Estilo geral do carrossel */
-.carousel {
-    max-width: 800px; /* Limita a largura máxima */
-    margin: 20px auto; /* Centraliza o carrossel */
-    border-radius: 15px; /* Bordas arredondadas */
-    overflow: hidden;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+   /* Estilo para o carrossel */
+#carouselExample {
+    max-width: 80%; /* Ajuste a largura do carrossel */
+    margin: 0 auto; /* Centraliza o carrossel */
+    border-radius: 10px; /* Arredonda as bordas do carrossel */
+    overflow: hidden; /* Oculta o excesso para bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra */
 }
 
-/* Imagens do carrossel */
 .carousel-inner img {
-    width: 150%; /* Imagem ocupa toda a largura do contêiner */
+    width: 100%; /* As imagens ocupam toda a largura do carrossel */
     height: auto; /* Mantém a proporção da imagem */
-    transition: transform 0.5s ease; /* Transição para o zoom ao passar o mouse */
+    transition: transform 0.5s ease; /* Transição suave para o zoom */
 }
 
-/* Zoom suave ao passar o mouse */
 .carousel-inner img:hover {
-    transform: scale(1.05); /* Aumenta ligeiramente a imagem */
+    transform: scale(1.05); /* Leve efeito de zoom ao passar o mouse */
 }
 
-/* Estilo das legendas */
-.carousel-caption {
-    background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
-    color: #ffffff; /* Cor do texto */
-    padding: 10px 20px;
-    border-radius: 8px; /* Bordas arredondadas na legenda */
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Sombra no texto */
-    bottom: 20px; /* Posiciona a legenda mais próxima do fundo */
-}
-
-/* Estilo dos botões de navegação */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: #000000; /* Fundo preto */
-    border-radius: 50%; /* Forma circular */
-    padding: 10px; /* Tamanho maior para facilitar o clique */
-    opacity: 0.8; /* Transparência */
-}
-
-/* Efeito hover para os botões de navegação */
-.carousel-control-prev-icon:hover,
-.carousel-control-next-icon:hover {
-    background-color: #ffffff; /* Altera para branco ao passar o mouse */
-    opacity: 1; /* Remova a transparência no hover */
-}
 
 /* Responsividade */
 @media (max-width: 768px) {

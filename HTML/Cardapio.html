@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantinho do Sabor - Cardápio</title>
+    <link rel="stylesheet" href="../assets/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../assets/js/color-modes.js"></script>
+
+    <style>
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: #121212; /* Escuro */
+            color: #ffffff; /* Texto branco */
+        }
+        header {
+            background-color: #8b0000;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header img {
+            max-height: 120px;
+            margin-bottom: 15px;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        header h2 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: #ffcc00;
+        }
+        .cardapio-section {
+            margin: 4rem auto;
+            max-width: 1200px;
+            padding: 0 15px;
+        }
+        .cardapio-category {
+            margin-bottom: 4rem;
+        }
+        .cardapio-category h3 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-weight: 500;
+            border-bottom: 3px solid #8b0000;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: #8b0000;
+        }
+        .card-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .card-item img {
+            max-height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        .card-item .card-title {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #333;
+        }
+        .card-item .card-description {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+        .card-item .card-price {
+            font-size: 1.5rem;
+            color: #8b0000;
+            font-weight: bold;
+        }
+        .quantity-input {
+            width: 60px;
+            margin-right: 20px;
+        }
+        .btn-pedido {
+            display: inline-block;
+            background-color: #8b0000;
+            color: white;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 25px;
+            text-transform: uppercase;
+            text-decoration: none;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        .btn-pedido:hover {
+            background-color: #b22222;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 5rem;
+        }
+        footer p {
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="../carousel/index.html"> 
+        <img src="../Imagens/logo.png" alt="Logo do Cantinho do Sabor">
+    </a>
+    <h1>Cantinho do Sabor</h1>
+    <h2>Sabor & Tradição</h2>
+</header>
+
+<div class="container cardapio-section text-center">
+    <h3 style="font-size: 2.5rem; color: #8b0000;">Selecione o Número da Sua Mesa</h3>
+
+    <form action="#cardapio" method="GET">
+        <div class="form-group">
+            <label for="mesa"></label>
+            <select name="mesa" id="mesa" class="form-control" style="max-width: 300px; margin: 0 auto;">
+                <option value="">Nº da sua mesa</option>
+                <option value="Mesa 1">Mesa 1</option>
+                <option value="Mesa 2">Mesa 2</option>
+                <option value="Mesa 3">Mesa 3</option>
+                <option value="Mesa 4">Mesa 4</option>
+                <option value="Mesa 5">Mesa 5</option>
+            </select>
+        </div>
+       <button type="submit" class="btn btn-mesa" style="background-color: #8b0000;">Selecionar Mesa</button>
+    </form>
+</div>
+
+<!-- Cardápio -->
+<div class="container cardapio-section">
+    <h2 class="text-center mb-5" style="font-size: 2.5rem; color: #8b0000;">Nosso Cardápio</h2>
+
+    <!-- Formulário de Pedido -->
+    <form action="/finalizar_pedido" method="POST">
+        
+        <!-- Categoria de Pratos Principais -->
+        <div class="cardapio-category">
+            <h3>Salgados</h3>
+
+            <!-- Feijoada -->
+            <div class="card-item">
+                <img src="../Imagens/feijoada.webp" alt="Feijoada">
+                <div>
+                    <div class="card-title">Feijoada</div>
+                    <div class="card-description">Uma deliciosa feijoada com arroz, farofa e couve. Perfeita para compartilhar!</div>
+                    <div class="card-price">R$ 45,00</div>
+                </div>
+                <div>
+                    <input type="number" name="quantidade_feijoada" class="quantity-input" value="0" min="0">
+                </div>
+            </div>
+
+            <!-- Bife Acebolado -->
+            <div class="card-item">
+                <img src="../Imagens/bifeAcebolado.png" alt="Bife Acebolado">
+                <div>
+                    <div class="card-title">Bife Acebolado</div>
+                    <div class="card-description">Bife suculento acompanhado de arroz, feijão e batata frita.</div>
+                    <div class="card-price">R$ 39,90</div>
+                </div>
+                <div>
+                    <input type="number" name="quantidade_bife" class="quantity-input" value="0" min="0">
+                </div>
+            </div>
+
+            <!-- Moqueca de Peixe -->
+            <div class="card-item">
+                <img src="../Imagens/moqueca.jpg" alt="Moqueca de Peixe">
+                <div>
+                    <div class="card-title">Moqueca de Peixe</div>
+                    <div class="card-description">Peixe fresco em molho de coco e dendê, servido com arroz branco.</div>
+                    <div class="card-price">R$ 59,90</div>
+                </div>
+                <div>
+                    <input type="number" name="quantidade_moqueca" class="quantity-input" value="0" min="0">
+                </div>
+            </div>
+
+            <!-- Novo prato - Galinhada -->
+            <div class="card-item">
+                <img src="../Imagens/coxinha.jfif" alt="Galinhada">
+                <div>
+                    <div class="card-title">Galinhada</div>
+                    <div class="card-description">Deliciosas coxinhas crocantes por fora e recheadas com frango temperado, perfeitas para petiscar e compartilhar.</div>
+                    <div class="card-price">R$ 34,90</div>
+                </div>
+                <div>
+                    <input type="number" name="quantidade_porções" class="quantity-input" value="0" min="0">
+                </div>
+            </div>
+        </div>
+
+        <!-- Categoria de Bebidas -->
+        <div class="cardapio-category">
+            <h3>Bebidas</h3>
+
+            <!-- Suco Natural -->
+            <div class="card-item">
+                <img src="../Imagens/sucos.jfif" alt="Suco Natural">
+                <div>
+                    <div class="card-title">Suco Natural</div>
+                    <div class="card-description">Escolha entre laranja, abacaxi ou maracujá. Natural e refrescante!</div>
+                    <div class="card-price">R$ 10,00</div>
+                </div>
+                <div>
+                    <input type="number" name="quantidade_suco" class="quantity-input" value="0" min="0">
+                </div>
+            </div>
+
+            <!-- Refrigerante -->
+            <div class="card-item">
+                <img src="../Imagens/refrigerante.jpg" alt="Refrigerante">
+                <div>
+                    <div class="card-title">Refrigerante</div>
+                    <div class="card-description">Escolha entre Coca-Cola, Fanta ou Guaraná.</div>
+                    <div class="card-price">R$ 8,00</div>
+                </div>
+                <div>
+                    <input type="number" name="quantidade_refrigerante" class="quantity-input" value="0" min="0">
+                </div>
+            </div>
+
+            <div class="card-item">
+                <img src="../Imagens/cerveja.jfif" alt="Cerveja Artesanal">
+                <div>
+                    <div class="card-title">Cerveja Artesanal</div>
+                    <div class="card-description">Cerveja artesanal gelada, com diferentes sabores.</div>
+                    <div class="card-price">R$ 15,00</div>
+                </div>
+                <div>
+                    <input type="number" name="quantidade_cerveja" class="quantity-input" value="0" min="0">
+                </div>
+            </div>
+        </div>
+
+        <!-- Categoria de Sobremesas -->
+        <div class="cardapio-category">
+            <h3>Sobremesas</h3>
+
+            <!-- Pudim -->
+            <div class="card-item">
+                <img src="../Imagens/pudim.jpg" alt="Pudim">
+                <div>
+                    <div class="card-title">Pudim</div>
+                    <div class="card-description">Clássico pudim de leite condensado com caramelo.</div>
+                    <div class="card-price">R$ 12,00</div>
+                </div>
+                <div>
+                    <input type="number" name="quantidade_pudim" class="quantity-input" value="0" min="0">
+                </div>
+            </div>
+
+            <!-- Torta de Limão -->
+            <div class="card-item">
+                <img src="../Imagens/torta choco.jfif" alt="Torta de Limão">
+                <div>
+                    <div class="card-title">Torta de chocolate</div>
+                    <div class="card-description">Torta cremosa com base crocante e recheio de chocolate.</div>
+                    <div class="card-price">R$ 15,00</div>
+                </div>
+                <div>
+                    <input type="number" name="quantidade_torta_limao" class="quantity-input" value="0" min="0">
+                </div>
+            </div>
+        </div>
+
+        <!-- Finalizar Pedido -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-lg btn-pedido">Finalizar Pedido</button>
+        </div>
+    </form>
+</div>
+
+<!-- Footer -->
+<footer class="text-center mt-4 py-3">
+    <p>Aguardamos sua visita!<br>
+       Rua Ipanema, 1243 - Rio de Janeiro<br>
+       Telefone: (75) 98898-8547</p>
+</footer>
+
+</body>
+</html>
