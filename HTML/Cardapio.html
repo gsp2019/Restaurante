@@ -166,8 +166,8 @@
             <div class="card-item">
                 <img src="../Imagens/feijoada.webp" alt="Feijoada">
                 <div>
-                    <div class="card-title">Feijoada</div>
-                    <div class="card-description">Uma deliciosa feijoada com arroz, farofa e couve. Perfeita para compartilhar!</div>
+                    <div class="card-title"> Feijoada</div>
+                    <div class="card-description"> Uma deliciosa feijoada com arroz, farofa e couve. Perfeita para compartilhar!</div>
                     <div class="card-price">R$ 45,00</div>
                 </div>
                 <div>
@@ -201,19 +201,7 @@
                 </div>
             </div>
 
-            <!-- Novo prato - Galinhada -->
-            <div class="card-item">
-                <img src="../Imagens/coxinha.jfif" alt="Galinhada">
-                <div>
-                    <div class="card-title">Galinhada</div>
-                    <div class="card-description">Deliciosas coxinhas crocantes por fora e recheadas com frango temperado, perfeitas para petiscar e compartilhar.</div>
-                    <div class="card-price">R$ 34,90</div>
-                </div>
-                <div>
-                    <input type="number" name="quantidade_porções" class="quantity-input" value="0" min="0">
-                </div>
-            </div>
-        </div>
+    
 
         <!-- Categoria de Bebidas -->
         <div class="cardapio-category">
@@ -258,6 +246,77 @@
             </div>
         </div>
 
+        <!-- Categoria de Lanches -->
+<div class="cardapio-category">
+    <h3>Lanches</h3>
+
+    <!-- Hambúrguer Artesanal -->
+    <div class="card-item">
+        <img src="../Imagens/hamburguer_artesanal-.webp" alt="Hambúrguer Artesanal">
+        <div>
+            <div class="card-title">Hambúrguer Artesanal</div>
+            <div class="card-description">Pão macio com hambúrguer artesanal, queijo, alface, tomate e molho especial.</div>
+            <div class="card-price">R$ 29,90</div>
+        </div>
+        <div>
+            <input type="number" name="quantidade_hamburguer" class="quantity-input" value="0" min="0">
+        </div>
+    </div>
+
+    <!-- Sanduíche de Frango -->
+    <div class="card-item">
+        <img src="../Imagens/sanduicheFrango.avif" alt="Sanduíche de Frango">
+        <div>
+            <div class="card-title">Sanduíche de Frango</div>
+            <div class="card-description">Sanduíche de frango grelhado com alface, tomate e molho de iogurte.</div>
+            <div class="card-price">R$ 19,90</div>
+        </div>
+        <div>
+            <input type="number" name="quantidade_sanduiche_frango" class="quantity-input" value="0" min="0">
+        </div>
+    </div>
+
+    <!-- Hot Dog -->
+    <div class="card-item">
+        <img src="../Imagens/cachorroQuente.jpg" alt="Hot Dog">
+        <div>
+            <div class="card-title">Hot Dog</div>
+            <div class="card-description">Cachorro-quente com salsicha, molho de tomate, batata palha e milho.</div>
+            <div class="card-price">R$ 12,00</div>
+        </div>
+        <div>
+            <input type="number" name="quantidade_hotdog" class="quantity-input" value="0" min="0">
+        </div>
+    </div>
+
+    <!-- Pastel de Carne -->
+    <div class="card-item">
+        <img src="../Imagens/pastel.jfif" alt="Pastel de Carne">
+        <div>
+            <div class="card-title">Pastel de Carne</div>
+            <div class="card-description">Pastel frito recheado com carne moída bem temperada.</div>
+            <div class="card-price">R$ 8,00</div>
+        </div>
+        <div>
+            <input type="number" name="quantidade_pastel" class="quantity-input" value="0" min="0">
+        </div>
+    </div>
+
+    <!-- Coxinha -->
+    <div class="card-item">
+        <img src="../Imagens/coxinha.jfif" alt="Coxinha">
+        <div>
+            <div class="card-title">Coxinha</div>
+            <div class="card-description">Coxinha crocante com recheio de frango desfiado e temperado.</div>
+            <div class="card-price">R$ 6,00</div>
+        </div>
+        <div>
+            <input type="number" name="quantidade_coxinha" class="quantity-input" value="0" min="0">
+        </div>
+    </div>
+</div>
+
+
         <!-- Categoria de Sobremesas -->
         <div class="cardapio-category">
             <h3>Sobremesas</h3>
@@ -291,7 +350,7 @@
 
         <!-- Finalizar Pedido -->
         <div class="text-center">
-            <button type="submit" class="btn btn-lg btn-pedido">Finalizar Pedido</button>
+            <p><a class="btn btn-secondary" href="../checkout/pagamento.html" style="background-color:#8b0000;">finalizar pedido </a></p>
         </div>
     </form>
 </div>
